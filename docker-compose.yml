@@ -6,5 +6,6 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - .:/usr/src/app
+    env_file: "widget/.env"
     ports:
       - "4000:4000"

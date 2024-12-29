@@ -13,7 +13,7 @@ build: ## Build all containers
 	@docker compose build
 
 start: ## Start all containers
-	@docker compose up
+	@docker compose up -d
 
 stop: ## Stop all containers
 	@docker compose stop
@@ -30,5 +30,5 @@ fresh:  ## Destroy & recreate all container
 	make start
 
 ssh:
-	docker exec -it ${CONTAINER_PHP} sh
+	docker exec -t -i ${CONTAINER_WIDGET} /bin/bash
 
